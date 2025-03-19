@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="c">Div</div>
+    <script src="script.js">
+
+const p1 = document.createElement("p"); 
+p1.innerText = "p1."; 
+document.body.appendChild(p1); 
+
+const hdng = document.createElement("h2"); 
+hdng.innerText = "Subhdng"; 
+document.body.appendChild(hdng); 
+hdng.innerText = "Updated Subhdng"; 
+
+const dv = document.createElement("div");
+dv.innerText = "div."; 
+document.body.appendChild(dv); 
+document.body.removeChild(dv); 
+
+const ule = document.createElement("ul"); 
+for (let i = 1; i <= 3; i++) {
+  const liElement = document.createElement("li"); 
+  liElement.innerText = `Item ${i}`;
+  ule.appendChild(liElement); 
+}
+document.body.appendChild(ule); 
+
+console.log(ule.firstChild.innerText); 
+console.log(ule.lastChild.innerText); 
+
+const h31 = document.createElement("h3"); 
+h31.innerText = "Heading"; 
+document.body.insertBefore(h31, document.body.firstChild); 
+const sele = document.createElement("span"); 
+sele.innerText = "span."; 
+const c = document.getElementById("c"); 
+c.appendChild(sele); 
+console.log(sele.parentElement); 
+
+
+</script>
+
+
+</body>
+</html>

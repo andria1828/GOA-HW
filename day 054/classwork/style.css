@@ -1,0 +1,36 @@
+.box {
+    width: 200px;
+    height: 190px;
+    background-color: rgb(95, 159, 255);
+    position: relative;
+    top: 350px;
+    left: 900px;
+    animation-name: app; /* ანიმაციის სახელი */
+    animation-duration: 8s;   /* განსავზღვრავ რამდენი ხანი გძელდება ანიმაცია */
+    animation-iteration-count: infinite; /* რამდენი ჯერ განმეორდება ანიმაცაია */
+
+}
+@keyframes app {
+    0%{
+        background-color: green;
+        border-radius: 25px;
+    }
+    25%{
+        background-color: rgb(170, 43, 255);
+        scale: (1.4);
+    }
+    50%{
+        background-color: rgb(241, 35, 35);
+        rotate: (40deg);
+    }
+    75%{
+        background-color: rgb(255, 107, 156);
+        position: relative;
+        top: 20px;
+        
+    }
+    100%{
+        background-color: rgb(255, 251, 23);
+        rotate: 25px;
+    }
+}

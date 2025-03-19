@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+body {
+  display: grid;
+  grid-template-areas:
+    'Sidebar Header Header Sect1'
+    'Sidebar Sect2 Sect3 Navigation'
+    'Sidebar Sect4 Sect5 Navigation';
+  grid-template-columns: 210px 1434px 211px;
+  grid-template-rows: 100px 412px 200px;
+}
+
+.a1, .a2, .a3, .a4, .a5 {
+  background-color: #6aa36c;
+  color: white;
+  border: 2px solid aqua;
+  padding: 20px;
+}
+
+.a1 {
+  grid-area: Sidebar;
+}
+
+.a2 {
+  grid-area: Header;
+}
+
+.a3 {
+  grid-area: Sect1;
+}
+
+.a4 {
+  grid-area: Sect2;
+}
+
+.a5 {
+  grid-area: Sect3;
+}
+
+.a6 {
+  grid-area: Sect4;
+}
+
+.a7 {
+  grid-area: Sect5;
+}
+
+.a8 {
+  grid-area: Navigation;
+}
+

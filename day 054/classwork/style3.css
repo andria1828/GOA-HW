@@ -1,0 +1,40 @@
+.element {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: colorChange;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+  }
+  
+
+  .element-normal {
+    animation-direction: normal; /* ანიმაციის ჩვეულებრივი მიმართულება */
+  }
+  
+
+  .element-reverse {
+    animation-direction: reverse; /* ანიმაციის საპირისპირო მიმართულება */
+  }
+  
+
+  .element-alternate {
+    animation-direction: alternate; /* ანიმაციის წინ და უკან შეცვლა */
+  }
+  
+
+  .element-alternate-reverse {
+    animation-direction: alternate-reverse; /* ანიმაციის უკან დაწყება და შემდეგ წინ შეცვლა */
+  }
+  
+ 
+  @keyframes colorChange {
+    from {
+      background-color: red;
+    }
+    to {
+      background-color: blue;
+    }
+  }
+  

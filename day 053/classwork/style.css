@@ -1,0 +1,51 @@
+.a {
+    width: 100px; /*  სიგრძე */
+    height: 100px; /*  სიმაღლე */
+    background-color: #3498db; /*  ფერის შეცვლა */
+    transition: 2s ease-in-out; /* ტრანსფორმაციის ცვლილების დროსი განმავლობაში, რომელიც გრძელდება 2 წამი */
+    position:relative;
+    left: 1000px;
+    top: 400px;
+  }
+  .a:hover {
+    transform: scale(1.5) rotate(45deg) skew(20deg, 10deg); /* ელემენტი 50% -ით იზრდება, 45 გრადუსით მრუდდება და 20 გრადუსით მრუდდება X ღერძის გარშემო და 10 გრადუსით Y ღერძის გარშემო */
+  }
+
+  .b {
+    width: 100px; /*  სიგრძე */
+    height: 100px; /*  სიმაღლე */
+    background-color: #9aa0a4; /*  ფერის შეცვლა */
+    transition: 2s ease-in-out; /* ტრანსფორმაციის ცვლილების დროსი განმავლობაში, რომელიც გრძელდება 2 წამი */
+    position:relative;
+    left: 800px;
+    top: 300px;
+  }
+  .b:hover {
+    background-color: rgb(155, 176, 176); 
+    transition: 1.3s ease-in-out; 
+    scale: 1.3;
+    border-radius: 25px;
+  }
+
+.c {
+  /* რომელი თვისებები უნდა გადავიდნენ თანდათანობითი ცვლილების გავლენით */
+  transition-property: background-color, transform;
+  
+  /* რამდენ ხანს გაგრძელდება ტრანზიცია თითოეულ თვისებაზე */
+  transition-duration: 0.5s, 1s;
+  
+  /* როგორ უნდა შეიცვალოს თვისების მნიშვნელობა დროში */
+  transition-timing-function: ease-in, ease-out;
+  
+  /* რამდენ ხანს უნდა დაელოდოს ტრანზიცია დაწყებას */
+  transition-delay: 0s, 0.5s;
+}
+
+/* როდესაც ელემენტი ჰოვერზეა (კურსორი გადაადგილებულია ელემენტზე) */
+.c:hover {
+  /* ფონის ფერის ცვლილება  ჰოვერზე */
+  background-color: blue;
+  
+  /*  ზომის გაზრდა ჰოვერზე */
+  transform: scale(1.2);
+}

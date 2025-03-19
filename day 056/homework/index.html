@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .button-container {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>დააჭირეთ ღილაკს სურათის შეცვლისთვის</h1>
+    <img id="myImage" src="https://th.bing.com/th/id/R.3e77a1db6bb25f0feb27c95e05a7bc57?rik=07AQ3YRhkD3z8A&pid=ImgRaw&r=0" alt="Image" />
+
+    <div class="button-container">
+        <button onclick="document.getElementById('myImage').src='https://static.vecteezy.com/system/resources/previews/016/916/479/original/placeholder-icon-design-free-vector.jpg'">სურათი 1</button>
+        <button onclick="document.getElementById('myImage').src='https://th.bing.com/th/id/OIP.Te50uoIFp3ezOLDRvnQr-wAAAA?rs=1&pid=ImgDetMain'">სურათი 2</button>
+        <button onclick="document.getElementById('myImage').src='https://th.bing.com/th/id/R.3e77a1db6bb25f0feb27c95e05a7bc57?rik=07AQ3YRhkD3z8A&pid=ImgRaw&r=0'">სურათი 3</button>
+    </div>
+</body>
+</html>
+

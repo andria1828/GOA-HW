@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input to H1</title>
+</head>
+<body>
+    <input type="txt" id="usrinpt" placeholder="შეიყვანე ტექსტი">
+    <button id="updtbtn">განახლება</button>
+    <h1 id="dspl">გამოჩნდება ტექსტი</h1>
+    <script>
+
+const inputField = document.getElementById('usrinpt');
+const button = document.getElementById('updtbtn');
+const h1Element = document.getElementById('dspl');
+
+button.addEventListener('click', () => {
+    const inputValue = inputField.value;
+    h1Element.textContent = inputValue;
+});
+
+</script>
+
+</body>
+</html>

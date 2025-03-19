@@ -1,0 +1,52 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: #D6E3EC;
+}
+
+.logo {
+    color: white;
+}
+
+.container {
+    background-color: #24252A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px; 
+}
+
+a:link, a:visited {
+    color: rgb(203, 195, 195);
+    padding: 15px 20px;
+    margin-right: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+
+.contact {
+    background-color: #0088AA;
+    color: #ffffff;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+}
+.ad {
+position: absolute;
+    margin-bottom: 20px;
+    position: fixed;
+    background-color: red;
+    color: #ffffff;
+    height: 200px;
+    width: 200px;
+}
+
+.ra {
+    height: 2000000px;
+}

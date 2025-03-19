@@ -1,0 +1,40 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+   background-color: gray; 
+}
+
+header {
+    background-color: white ;
+    width: 100%;
+    height: 100px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+
+
+}
+a {
+    text-decoration: none;
+    color: #8f8686;
+    text-align: center; 
+}
+#s {
+    color: purple;
+    font-size: 30px;
+    display: flex;
+    position: relative;
+    top: 25px;
+    left: 30px;
+}
+@media (min-width: 400px) and (max-width: 600px) {
+    body {
+      background-color: green; 
+    }
+  }
