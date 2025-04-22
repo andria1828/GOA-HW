@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Tasks</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #d, #td, #rd, #sd {
+            width: 100px;
+            height: 100px;
+            margin: 10px 0;
+        }
+        #d {
+            background-color: lightgray;
+        }
+        #td {
+            background-color: yellow;
+        }
+        #rd {
+            background-color: red;
+        }
+        #sd {
+            background-color: white;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="d"></div>
+
+    <button id="tgbtn">Toggle Active</button>
+    <div id="td"></div>
+
+    <p id="chkp" class="imp">Check for "imp"</p>
+
+    <div id="rd" class="red"></div>
+
+    <div id="itdiv" class="class1 class2 class3"></div>
+
+    <ul id="lst">
+        <li>i 1</li>
+        <li>i 2</li>
+        <li>i 3</li>
+    </ul>
+
+    <p id="p1">Placeholder text</p>
+
+    <div id="sd">Styled Div</div>
+
+    <ul id="al"></ul>
+
+    <ul id="rl">
+        <li>I 1</li>
+        <li>I 2</li>
+        <li>I 3</li>
+    </ul>
+
+    <img id="img5" src="placeholder.jpg" alt="Placeholder image">
+
+    <script>
+        const d = document.getElementById("d");
+        d.classList.add("highlight");
+
+        d.classList.remove("highlight");
+
+        document.getElementById("tgbtn").addEventListener("click", () => {
+            document.getElementById("td").classList.toggle("active");
+        });
+
+        const hasImportant = document.getElementById("chkp").classList.contains("imp");
+        console.log("Has 'imp' class:", hasImportant);
+
+        const rd = document.getElementById("rd");
+        rd.classList.replace("red", "blue");
+
+        const secondClass = document.getElementById("itdiv").classList.item(1);
+        console.log("Second class:", secondClass);
+
+        const lst = document.getElementById("lst");
+        const newLi = document.createElement("li");
+        newLi.textContent = "New Item";
+        lst.appendChild(newLi);
+        lst.removeChild(lst.firstElementChild);
+        lst.children[1].textContent = "Changed Item";
+
+        document.getElementById("p1").textContent = "New text content!";
+
+        const sd = document.getElementById("sd");
+        sd.style.backgroundColor = "lightblue";
+        sd.style.color = "darkblue";
+
+        const al = document.getElementById("al");
+        const appendLi = document.createElement("li");
+        appendLi.textContent = "New list item";
+        al.appendChild(appendLi);
+
+        const rl = document.getElementById("rl");
+        rl.removeChild(rl.children[1]);
+
+        const img5 = document.getElementById("img5");
+        img5.src = "new-image.jpg";
+        img5.alt = "Updated image";
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#b {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+}
+
+    </style>
+</head>
+<body>
+    <button id="i"> გაზრდა</button>
+    <button id="d"> შემცირება</button>
+    <div id="b" class="b"></div>
+    <script>
+    const iButton = document.getElementById('i');
+    const dButton = document.getElementById('d');
+    const b = document.getElementById('b');
+
+    iButton.addEventListener('click', () => {
+        b.classList.add('larger');
+        b.classList.remove('smaller');
+    });
+
+    dButton.addEventListener('click', () => {
+        b.classList.add('smaller');
+        b.classList.remove('larger');
+    });
+
+    document.styleSheets[0].insertRule('.larger { width: 150px; height: 150px; }', 0);
+    document.styleSheets[0].insertRule('.smaller { width: 50px; height: 50px; }', 0);
+
+    </script>
+</body>
+</html>

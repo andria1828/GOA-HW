@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div class="scsa">
+      <div class="sldr">
+        <img src="image.png" />
+        <img src="image copy.png" />
+        <img src="image copy 2.png" />
+        <img src="image copy 3.png" />
+      </div>
+      <div class="d-container">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+      <button class="prev" onclick="ms(-1)">&#10094;</button>
+      <button class="next" onclick="ms(1)">&#10095;</button>
+    </div>
+
+    <script>
+      const images = document.querySelectorAll(".sldr img");
+      const d = document.querySelectorAll(".dot");
+      let ci = 0;
+      let int;
+
+      function cs() {
+        const currentImage = images[ci];
+        const currentDot = d[ci];
+
+        currentImage.classList.remove("active");
+        currentDot.classList.remove("active");
+
+        ci = (ci + 1) % images.length;
+
+        const nextImage = images[ci];
+        const nextDot = d[ci];
+
+        nextImage.classList.add("active");
+        nextDot.classList.add("active");
+      }
+
+      function ms(direction) {
+        clearInterval(int);
+        const currentImage = images[ci];
+        const currentDot = d[ci];
+
+        currentImage.classList.remove("active");
+        currentDot.classList.remove("active");
+
+        ci = (ci + direction + images.length) % images.length;
+
+        const nextImage = images[ci];
+        const nextDot = d[ci];
+
+        nextImage.classList.add("active");
+        nextDot.classList.add("active");
+
+        int = setInterval(cs, 3000);
+      }
+
+      function da() {
+        images[0].classList.add("active");
+        d[0].classList.add("active");
+        int = setInterval(cs, 3000);
+      }
+
+      da();
+
+      d.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          clearInterval(int);
+          ci = parseInt(dot.getAttribute("data-index"));
+          const currentImage = images[ci];
+          const currentDot = d[ci];
+
+          images.forEach((img) => img.classList.remove("active"));
+          d.forEach((d) => d.classList.remove("active"));
+
+          currentImage.classList.add("active");
+          currentDot.classList.add("active");
+
+          int = setInterval(cs, 3000);
+        });
+      });
+    </script>
+  </body>
+</html>

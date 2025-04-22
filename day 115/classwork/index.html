@@ -1,0 +1,39 @@
+html
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slider">
+        <button class="prev" id="prevButton">⟨</button>
+        <img id="sldrimg" src="image.png" alt="Slide 1">
+        <button class="next" id="nxtbtn">⟩</button>
+    </div>
+    <script>
+
+const images = ["image copy 2.png", "i=image copy.png", "image.jpg"];
+let crntindx = 0;
+
+const sldrimg = document.getElementById("sldrimg");
+const prevButton = document.getElementById("prevButton");
+const nxtbtn = document.getElementById("nxtbtn");
+
+prevButton.addEventListener("click", () => {
+    crntindx = (crntindx === 0) ? images.length - 1 : crntindx - 1;
+    sldrimg.src = images[crntindx];
+});
+
+nxtbtn.addEventListener("click", () => {
+    crntindx = (crntindx === images.length - 1) ? 0 : crntindx + 1;
+    sldrimg.src = images[crntindx];
+});
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 1000px;
+    background-color: #eaffa5;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9fd8ff;
+    color: rgb(19, 201, 207);
+    font-size: 24px;
+    border-radius: 8px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+</head>
+<body>
+
+  <h1>Temperaturec</h1>
+
+  <label for="t">Enter t:</label>
+  <input type="n" id="t" placeholder="Temperature">
+  
+  <select id="unit">
+    <option value="C">cel</option>
+    <option value="F">f</option>
+  </select>
+
+  <button onclick="convertTemperature()">c</button>
+
+  <div id="res"></div>
+
+  <script>
+    function convertTemperature() {
+      const t = parseFloat(document.getElementById("t").value);
+      const unit = document.getElementById("unit").value;
+      
+      let res = "";
+      if (isNaN(t)) {
+        res = "Please enter a valid n!";
+      } else {
+        if (unit === "C") {
+          const fahrenheit = (t * 9/5) + 32;
+          res = `${t}°C is equal to ${fahrenheit.toFixed(2)}°F`;
+        } else if (unit === "F") {
+          const celsius = (t - 32) * 5/9;
+          res = `${t}°F is equal to ${celsius.toFixed(2)}°C`;
+        }
+      }
+
+      document.getElementById("res").innerText = res;
+    }
+  </script>
+
+</body>
+</html>

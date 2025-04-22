@@ -1,0 +1,11 @@
+#img{
+    float: right;
+    border-style: solid;
+    border-color: #0f000f;
+}
+body {
+    background-color: #ff000f;
+}
+#p {
+    color: #00ff00;
+}

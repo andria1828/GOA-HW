@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOC</title>
+</head>
+<body>
+  <div id="ue">ეს არის ID ელემენტი.</div>
+  
+  <div class="ce">ეს არის კლასის ელემენტი.</div>
+
+  <div>ეს არის ჩვეულებრივი ელემენტი.</div>
+  
+  <script>
+   
+const elemt = document.getElementById("ue");
+elemt.style.color = "white";
+elemt.style.backgroundColor = "blue";
+elemt.style.fontSize = "20px";
+elemt.style.fontStyle = "italic";
+elemt.innerText = "ID ელემენტი განახლებულია!";
+
+const ces = document.getElementsByClassName("ce");
+for (let i = 0; i < ces.length; i++) {
+  ces[i].style.color = "black";
+  ces[i].style.backgroundColor = "yellow";
+  ces[i].style.fontSize = "18px";
+  ces[i].style.fontWeight = "bold";
+  ces[i].innerText = "კლასის ელემენტი განახლებულია!";
+}
+
+const allDivs = document.getElementsByTagName("div");
+
+const nle = allDivs[2];
+nle.style.color = "green";
+nle.style.backgroundColor = "lightgray";
+nle.style.fontSize = "16px";
+nle.style.textDecoration = "underline";
+nle.innerText = "ჩვეულებრივი ელემენტი განახლებულია!";
+
+  </script>
+</body>
+</html>

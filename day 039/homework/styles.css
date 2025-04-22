@@ -1,0 +1,60 @@
+.p1 {
+    text-align: right;
+    width: 90%;
+    text-decoration-line: underline; 
+    text-decoration-style: dotted;   
+    text-decoration-color: #00ff00;   
+  }
+.p2{
+    text-align: right;
+    width: 75%;
+    text-decoration-line: line-through;   
+    text-decoration-color: #000000;  
+}
+.p3{
+    text-decoration-line:overline; 
+    text-decoration-style: double;     
+    text-decoration-color: #ff0000; 
+}
+.p4{
+    text-align: right;
+    width: 75%;
+    text-decoration:underline;   
+    text-decoration-color: #000000;  
+}
+.p5{
+    text-align: right;
+    width: 90%;
+    text-decoration:line-through;   
+    text-decoration-style:dotted ;
+    text-decoration-color: #00ff00;  
+}
+.p6{
+    text-decoration:line-through;   
+    text-decoration-color: #000000; 
+}
+.p7{
+    text-decoration:overline;   
+    text-decoration-color: #000000; 
+}
+.p8{
+    text-align: right;
+    width: 90%;
+    text-decoration:overline;   
+    text-decoration-color: #00ff00;
+    color: #00ff00; 
+}
+.p9{
+    text-align: right;
+    width: 75%;
+    text-decoration:overline;   
+    text-decoration-color: #808080;
+    color: #808080; 
+}
+.p10{
+    text-align: right;
+    width: 90%;
+    text-decoration:underline;   
+    text-decoration-style:dotted ;
+    text-decoration-color: #00ff00;
+}

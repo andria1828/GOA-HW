@@ -1,0 +1,17 @@
+.ss{
+    font-family: 'Arial', sans-serif;
+    font-weight: 400; 
+    color: #54f1ff; 
+    text-align: center;
+    
+  
+}
+body {
+    background-color: #1fa731;
+}
+.foot{
+    background-color: rgb(255, 0, 0);
+    padding-bottom: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}

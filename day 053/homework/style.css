@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.b {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    transition: all 0.5s ease;
+}
+
+
+.cg {
+    background-color: red;
+}
+.cg:hover {
+    background-color: green;
+}
+
+
+.sg {
+    background-color: blue;
+}
+.sg:hover {
+    width: 200px;
+    height: 200px;
+}
+
+
+.sc {
+    background-color: purple;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.sc:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.r {
+    background-color: orange;
+}
+.r:hover {
+    transform: rotate(45deg);
+}
+
+
+.s {
+    background-color: teal;
+}
+.s:hover {
+    transform: skew(-20deg, 10deg);
+}
+.o {
+    border: 2px grey solid;
+    background-color: gray;
+}
+
+.o:hover {
+    rotate: rotate(90deg);
+    border-radius: 90px;
+}

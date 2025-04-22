@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modified Tasks</title>
+    <style>
+        #clrDiv, #tglText, #cntrDiv, .rpbtn {
+            margin: 15px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        #clrDiv {
+            height: 100px;
+        }
+        #qres {
+            margin-top: 10px;
+            color: #005b00;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="clrButton">შეცვალე ფერი</button>
+    <div id="clrDiv">ფონის ფერი შეიცვლა</div>
+
+    <button id="imageButton">შეცვალე სურათი</button>
+    <img id="image" src="image1.jpg" alt="Initial Image" width="200">
+
+    <button id="tglButton">დამალე ან გამოჩენა ტექსტი</button>
+    <p id="tglText">ეს ტექსტი შეიძლება დაიმალოს ან გამოჩნდეს</p>
+
+    <button id="cntrButton">მრიცხველის გაზრდა</button>
+    <span id="cntr">0</span>
+
+    <p>რომელ წელს დაიწყო მეორე მსოფლიო ომი?</p>
+    <input type="radio" name="quiz" value="1939"> 1939<br>
+    <input type="radio" name="quiz" value="1945"> 1945<br>
+    <input type="radio" name="quiz" value="1914"> 1914<br>
+    <button id="qzbtn">შემოწმება</button>
+    <p id="qres"></p>
+
+    <button id="rpButton">შეცვალე კლასი</button>
+    <div id="rpDiv" class="rpbtn red"></div>
+
+    <script>
+        const clrDiv = document.getElementById('clrDiv');
+        document.getElementById('clrButton').addEventListener('click', () => {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            clrDiv.style.backgroundColor = randomColor;
+        });
+
+        const image = document.getElementById('image');
+        document.getElementById('imageButton').addEventListener('click', () => {
+            image.src = image.src.includes('image1.jpg') ? 'image2.jpg' : 'image1.jpg';
+        });
+
+        const tglText = document.getElementById('tglText');
+        document.getElementById('tglButton').addEventListener('click', () => {
+            tglText.style.display = tglText.style.display === 'none' ? 'block' : 'none';
+        });
+
+        let cntr = 0;
+        const cntrSpan = document.getElementById('cntr');
+        document.getElementById('cntrButton').addEventListener('click', () => {
+            cntr++;
+            cntrSpan.textContent = cntr;
+        });
+
+        document.getElementById('qzbtn').addEventListener('click', () => {
+            const selected = document.querySelector('input[name="quiz"]:checked');
+            const qres = document.getElementById('qres');
+            if (selected) {
+                qres.textContent = selected.value === '1939' ? 'სწორია!' : 'არასწორია!';
+            } else {
+                qres.textContent = 'გთხოვთ, აირჩიოთ პასუხი.';
+            }
+        });
+
+        const rpDiv = document.getElementById('rpDiv');
+        document.getElementById('rpButton').addEventListener('click', () => {
+            rpDiv.classList.replace('red', 'blue');
+        });
+    </script>
+
+</body>
+</html>

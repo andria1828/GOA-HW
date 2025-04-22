@@ -1,0 +1,200 @@
+<!-- 1 -->
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <input type="text" id="inpti" placeholder="enter elmnt">
+    <button id="addbtn">add</button>
+    
+    <ul id="itemlst"></ul>
+    <button id="cbtn">clear</button>
+    
+    <script>
+        const inpti = document.getElementById('inpti');
+        const addbtn = document.getElementById('addbtn');
+        const itemlst = document.getElementById('itemlst');
+        const cbtn = document.getElementById('cbtn');
+        addbtn.addEventListener('click', function() {
+            const newItemText = inpti.value.trim();
+            if (newItemText !== '') {
+                const li = document.createElement('li');
+                li.textContent = newItemText;
+                itemlst.appendChild(li);
+                inpti.value = '';
+            } else {
+                alert('გთხოვთ შეიყვანოთ ტექსტი!');
+            }
+        });
+        
+        cbtn.addEventListener('click', function() {
+            itemlst.innerHTML = '';
+        });
+    </script>
+</body>
+</html>
+
+<!-- 2 -->
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="c">0</div>
+    <button id="inc">plus</button>
+    <button id="dec">min</button>
+    <button id="inc10">plus 10</button>
+    <button id="dec10">min 10</button>
+
+    <script>
+        let c = document.getElementById("c");
+        let count = 0;
+        document.getElementById("inc").addEventListener("click", function() {
+            count += 1;
+            c.textContent = count;
+        });
+        document.getElementById("dec").addEventListener("click", function() {
+            count -= 1;
+            c.textContent = count;
+        });
+        document.getElementById("inc10").addEventListener("click", function() {
+            count += 10;
+            c.textContent = count;
+        });
+        document.getElementById("decBy10").addEventListener("click", function() {
+            count -= 10;
+            c.textContent = count;
+        });
+    </script>
+</body>
+</html>
+
+<!-- 3 -->
+
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="clrd">rgb(0, 0, 0)</div>
+    <button id="chngc">change</button>
+
+    <script>
+        function rndmclr() {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        document.getElementById("chngc").addEventListener("click", function() {
+            let nclr = rndmclr();
+            let clrd = document.getElementById("clrd");
+            clrd.style.backgroundColor = nclr;
+            clrd.textContent = nclr;
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- 4 -->
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <div id="sldr">
+        <img id="sldimg" src="img1" alt="Image">
+    </div>
+    <br>
+    <button id="prevBtn">left</button>
+    <button id="nextBtn">rigth</button>
+
+    <script>
+        const img = [
+            "img1",
+            "img2",
+            "img3",
+            "img4"
+        ];
+
+        let cindex = 0;
+
+        const sldimg = document.getElementById("sldimg");
+
+        document.getElementById("nextBtn").addEventListener("click", function() {
+            cindex = (cindex + 1) % img.length;
+            sldimg.src = img[cindex];
+        });
+
+        document.getElementById("prevBtn").addEventListener("click", function() {
+            cindex = (cindex - 1 + img.length) % img.length;
+            sldimg.src = img[cindex];
+        });
+    </script>
+
+</body>
+</html>
+
+<!-- 5 -->
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="c">
+        <input type="text" id="inpttxt" placeholder="შეიყვანეთ ტექსტი">
+        <br>
+        <button id="showBtn">show</button>
+        <button id="clearBtn">clear</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        const inpttxt = document.getElementById("inpttxt");
+        const showBtn = document.getElementById("showBtn");
+        const clearBtn = document.getElementById("clearBtn");
+        const msgdiv = document.getElementById("message");
+        showBtn.addEventListener("click", function() {
+            const text = inpttxt.value.trim();
+            if (text === "") {
+                msgdiv.textContent = "enter txt";
+                msgdiv.style.backgroundColor = "#ffcccc"; 
+            } else {
+                msgdiv.textContent = text;
+                msgdiv.style.backgroundColor = "#e1e1e1";
+            }
+        });
+
+        clearBtn.addEventListener("click", function() {
+            inpttxt.value = "";
+            msgdiv.textContent = "";
+        });
+    </script>
+</body>
+</html>

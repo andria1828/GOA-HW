@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="fc">
+        <h2>rgst</h2>
+        <form id="registration-form">
+            <label for="first-name">name:</label>
+            <input type="text" id="first-name" name="first-name" required><br>
+
+            <label for="last-name">srname:</label>
+            <input type="text" id="last-name" name="last-name" required><br>
+
+            <label for="email">gmail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">pasw:</label>
+            <input type="password" id="password" name="password" required><br>
+            <label for="confirm-password">enterpaswd:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required><br>
+            <button type="submit">registernow</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+    document.getElementById("registration-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById("first-name").value;
+    const lastName = document.getElementById("last-name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+    const messageDiv = document.getElementById("message");
+
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
+        messageDiv.innerHTML = "<div class='warning'>გთხოვთ შეავსოთ ყველა ველი!</div>";
+        document.body.style.backgroundColor = "#ffcccc"; 
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        messageDiv.innerHTML = "<div class='warning'>პაროლები არ ემთხვევა!</div>";
+        document.body.style.backgroundColor = "#ffcccc"; 
+        return;
+    }
+
+    messageDiv.innerHTML = "<div class='success'>slg</div>";
+    document.body.style.backgroundColor = "#ccffcc"; 
+});
+
+    </script>
+</body>
+</html>
